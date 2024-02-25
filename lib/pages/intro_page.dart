@@ -1,5 +1,5 @@
+import 'package:ecommerce_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
-
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -10,8 +10,11 @@ class IntroPage extends StatelessWidget {
       backgroundColor: Colors.grey[200],
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25,),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 25,
+          ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(25.0),
@@ -44,33 +47,38 @@ class IntroPage extends StatelessWidget {
               const SizedBox(
                 height: 48,
               ),
-
               GestureDetector(
-                onTap: ()=> Navigator.pushNamed(context, "/home"),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                ),
                 child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/home");
-                    },
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 16),
-                      child: Center(
-                        child: Text(
-                          "Shop Now",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()),
+                        );
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 16),
+                        child: Center(
+                          child: Text(
+                            "Shop Now",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                ),
+                    )),
               )
             ],
           ),

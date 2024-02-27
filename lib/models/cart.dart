@@ -17,18 +17,6 @@ class Cart extends ChangeNotifier{
       description: "agkshkanso asgungsa aogsnoishdo agsogoue asgojeo",
       imagePath: "lib/assets/images/shoe2.jpeg",
     ),
-    Shoe(
-      name: "Nike Air Max 97",
-      price: 250,
-      description: "akjsgdi agnjsg skjdabgu agsuo sg",
-      imagePath: "assets/images/nike_air_max_97.jpg",
-    ),
-    Shoe(
-      name: "Nike Air Max 98",
-      price: 300,
-      description: "uagsu agsureiognew asuegruepa  wugauob",
-      imagePath: "assets/images/nike_air_max_98.jpg",
-    ),
   ];
   //list of items in user's cart
   List<Shoe> userCart=[];

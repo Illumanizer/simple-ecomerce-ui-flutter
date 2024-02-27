@@ -28,15 +28,19 @@ class CartPage extends StatelessWidget {
               height: 24,
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: value.getUserCart().length,
-                itemBuilder: (context, index) {
-                  Shoe indinvidualShoe = value.getUserCart()[index];
-                  return CartItem(
-                    shoe: indinvidualShoe,
-                  );
-                },
-              ),
+              child: value.getUserCart().isEmpty
+                  ? const Center(
+                      child: Text("No items added yet....."),
+                    )
+                  : ListView.builder(
+                      itemCount: value.getUserCart().length,
+                      itemBuilder: (context, index) {
+                        Shoe indinvidualShoe = value.getUserCart()[index];
+                        return CartItem(
+                          shoe: indinvidualShoe,
+                        );
+                      },
+                    ),
             ),
           ],
         ),

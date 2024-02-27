@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/pages/cart_page.dart';
 import 'package:ecommerce_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -58,13 +59,14 @@ class IntroPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: TextButton(
-                      onPressed: () {
+                      onPressed : () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomePage()),
+                              builder: (context) =>   HomePage()),
                         );
-                      },
+                        },
+                    
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 16),
                         child: Center(

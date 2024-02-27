@@ -31,7 +31,6 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey[300],
-        body: _pages[_selectIndex],
         bottomNavigationBar: BottomNavBar(
           onTabChanged: (index) => navigationBottomBar(index),
         ),
@@ -50,7 +49,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        drawer: Drawer(
+
+          drawer: Drawer(
           backgroundColor: Colors.grey[900],
           width: 200,
           child: Column(
@@ -76,13 +76,13 @@ class _HomePageState extends State<HomePage> {
                         'Home',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {
+                      onTap: () =>
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const ShopPage()),
-                        );
-                      },
+                        )
+                      ,
                     ),
                   ),
                   Padding(
@@ -126,6 +126,9 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+
+       body: _pages[_selectIndex],
+
       ),
     );
   }
